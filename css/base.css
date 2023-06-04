@@ -1,0 +1,401 @@
+:root {
+  /* 默认背景色 */
+ --backColor:#fff;
+ --borderline:#00283a;
+  /* 卡片 */
+ --headerCOlor:#00283A;
+  /* 卡片 */
+ --headerhover:rgb(0, 40, 58,.8);
+   /* 默认字体颜色 */
+ --headerFont:#fff;
+   /* 反差色 */
+ --fontColor:#00283A;
+ --mainColor:#ff8181;
+ --bagColor:#02162b;
+ }
+
+
+/* 网页基本样式 */
+body {
+  position: relative;
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* color: white; */
+  /* background-color:green; */
+  color: var(--headerFont);
+  background-color:var(--bagColor); 
+}
+
+
+  /* 顶部导航区 */
+  .header {
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    /* background-color: red; */
+    background-color: var(--headerCOlor);
+    border-radius: 0% 0% 10px 10px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
+  }
+
+  /* 下面的装饰 */
+.borderafter::after{
+  content: '';
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  right: 0px;
+  height: 8px;
+  /* background-color: #00283A; */
+  background-color: var(--borderline);
+  border-radius: 0% 0% 5px 5px;
+  opacity: .3;
+}
+
+/* 上面的装饰 */
+.borderbefore::before{
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 8%;
+  right: 8%;
+  height: 10px;
+  background-color: var(--borderline);
+  border-radius: 5px 5px 0% 0%;
+  opacity: .3;
+}
+
+
+  /* 顶部导航区菜单栏 */
+  .menu_list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    /* background-color: yellow; */
+    background-color: var(--headerhover);
+  }
+  ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  ul>li {
+    display: inline-block;
+    font-size: 15px;
+  }
+
+  .carbox {
+    background-color: var(--headerCOlor);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px -2px rgb(0 0 0 / 15%);
+  }
+
+  .header-nav {
+    display: inline-block;
+  }
+  .header-nav>li {
+    padding: 0 30px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .header-nav>li:hover {
+    color: var(--mainColor);
+  }
+
+   a{
+    text-decoration: none;
+    /* color: red; */
+    color: inherit;
+   }
+   a:hover {
+    /* color: black; */
+    color: var(--mainColor);
+   }  
+
+
+   .header-nav>li.active::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    border-radius: 10px;
+    height: 4px;
+    /* background-color: purple; */
+    background-color: var(--mainColor);
+   }  
+   
+   /* 个人网站封面 */
+  img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+   /* 主题背景 */
+  .navigation {
+    /* margin: 100px 4px 0px 0px; */
+    margin: 0px auto 0;
+    width: 100%;
+    /* background-color: black; */
+    background-color: transparent;
+    height: 600px;
+    border-radius: 20px;
+    background-image: url("../images/index/a58cbbffd2aa49c1b1e99990be912f30.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: #fff;
+  }
+
+  .navigation>.nav-titleBox {
+    margin-top: 100px;
+    margin-left: 800px;
+    /* margin-top: 18rem; */
+    /* text-align: center; */
+  }
+
+  .navigation .titleBox-tag {
+    font-size: 28px;
+    /* text-align: center; */
+  }
+  
+   .navigation h1 {
+    margin: 130px 0;
+    font-size: 2.8rem;
+    text-shadow: 0 1px 10px rgb(0 0 0 / 30%);
+  }
+
+
+  /* 主要内容区 */
+  .content {
+    position: relative;
+    top: -90px;
+    min-height: 600px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    /* background-color: pink; */
+  }
+
+  .co-left {
+    width:25%;
+    display: inline-block;
+    /* background-color:red; */
+    min-height: 50px;
+  }
+  
+  .co-right {
+    width: 75%;
+    display: inline-block;
+    /* background-color: blue; */
+    min-height: 50px;
+    margin-left: 10px;
+  }
+
+  /* .scroll{
+    position: fixed !important;
+    top: 49%;
+  } */
+
+  /* 左半部分 */
+  .content .me-card {
+    width: fit-content;
+    min-width: 280px;
+    min-height: 650px;
+    /* background-color: var(--headerCOlor); */
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--headerCOlor);
+    /* border: 1px solid black; */
+    padding: 0px 30px;
+  }
+
+  /* 卡片第1部分 */
+  .mecar-title {
+    margin-top: 20px;
+    /* height: 250px; */
+    /* background-color: white; */
+  }
+
+  .mecar-title .me-image {
+    position: relative;
+    display: inline-block;
+  }
+  .me-image>img{
+    width: 100px;
+    height: 100px;
+    border: solid 3px #FCFCFE;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px -2px rgb(0 0 0 / 15%);
+  }
+  .mecar-title .me-image>.status{
+      height: 20px;
+      width: 20px;
+      box-shadow: 0 2px 4px -2px rgb(0 0 0 / 15%);
+      border-radius: 50%;
+      position: absolute;
+      border: solid 3px #FCFCFE;
+      right: 0px;
+      bottom: 0px;
+      background-color: var(--mainColor);
+      overflow: hidden;
+      color: #fff;
+  }
+  .mecar-title .me-image:hover .status{
+    width: 100px;
+    border-radius: 20px;
+  }
+  .mecar-title .me-image:hover .status i {
+    width: 0%;
+    visibility: hidden;
+  }
+  .mecar-title .me-image:hover .status i {
+    width: 100%;
+    visibility: visible;
+  }
+
+  .me-hover span{
+    margin: 0 auto;
+    display: block;
+    font: 14px ;
+    border-right: .08em solid;
+    /* 个数*2ch */
+    width: 28ch; 
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(28,end), blink-caret .3s step-end infinite alternate;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  @keyframes blink-caret {
+    50%{
+      border-color: transparent;
+    }
+  }
+
+  /* 虚线 */
+  .content .borderbotm {
+    /* border-style: dashed; */
+    border-bottom: 1px dashed rgb(187, 185, 185);
+    height: 10px;
+    margin: 35px 0;
+  }
+
+
+  /* 卡片第2部分 */
+  .lianxi-list {
+    margin-top: 20px;
+    /* height: 250px; */
+    /* background-color: white;    */
+    text-align: left;
+  }
+  
+
+  /* 卡片第3部分 */
+  .mecar-bottm {
+    margin-top: 20px;
+    /* height: 250px; */
+    /* background-color: white;  */
+  }
+
+  .mecar-bottm>div {
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+    line-height: 25px;
+  }
+  
+  .mecar-bottm .mecarbottm-key {
+    font-weight: 500;
+  }
+  
+  .mecar-bottm .mecarbottm-value {
+    font-weight: 500;
+    color: #747474;
+  }
+
+  
+  
+  /* 卡片第4部分 */
+  .buttom-box {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    /* height: 250px; */
+    /* background-color: white;    */
+  }
+
+  .me-card .buttom-box .button{
+    display: block;
+    margin: 0 auto;
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    width: 200px;
+   
+    color: var(--headerFont);
+    border-radius: 50px;
+    background: linear-gradient(-45deg, var(--mainColor) 50%, #fff 60%, var(--mainColor) 70%);
+    background-size: 600% 100%;
+    animation: shine 5s infinite;
+  }
+  @keyframes shine {
+    0% {
+      background-position-x: 100%;
+    }
+    50% {
+      background-position-x: 0%;
+    }
+    100% {
+      background-position-x: -100%;
+    }
+  }
+
+
+  /* 右半部分 */
+
+  /* 公用 */
+.content-li>h3 {
+  display: flex;
+  align-items: center;
+  color: var(--headerFont);
+}
+
+.content-li .borderbotm {
+  flex: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.carbox {
+  background-color: var(--headerCOlor);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px -2px rgb(0 0 0 / 15%);
+}
+
+    
+    /* 底部标识 */
+    .copybottm {
+      padding: 30px 20px;
+      color: #7B7B7D;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      /* text-transform: uppercase; */
+    }
+  

@@ -1,0 +1,190 @@
+/* 网页基本样式 */
+body {
+  position: relative;
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: white;
+  background-color:green;
+}
+
+  /* 顶部导航区 */
+  .header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background-color: red;
+    border-radius: 0% 0% 10px 10px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
+  }
+
+  /* 顶部导航区菜单栏 */
+  .menu_list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: yellow;
+  }
+  ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  ul>li {
+    display: inline-block;
+    font-size: 20px;
+  }
+
+
+  .header-nav {
+    display: inline-block;
+  }
+  .header-nav>li {
+    padding: 0 30px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+   a{
+    text-decoration: none;
+    color: red;
+   }
+   a:hover {
+    color: black;
+   }  
+
+   .header-nav>li.active::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    border-radius: 10px;
+    height: 4px;
+    background-color: purple;
+   }  
+   
+   /* 个人网站封面 */
+   /* 主题背景 */
+  .navigation {
+    /* margin: 100px 4px 0px 0px; */
+    margin: 0px auto 0;
+    width: 100%;
+    background-color: black;
+    height: 600px;
+    border-radius: 20px;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: #fff;
+  }
+
+  .navigation>.nav-titleBox {
+    margin-top: 100px;
+    margin-left: 800px;
+  }
+
+  .navigation .titleBox-tag {
+    /* text-transform: uppercase; */
+    font-size: 28px;
+    /* text-align: center; */
+  }
+  
+   .navigation h1 {
+    margin: 130px 0;
+    font-size: 2.8rem;
+    text-shadow: 0 1px 10px rgb(0 0 0 / 30%);
+  }
+
+
+  /* 主要内容区 */
+  .content {
+    position: relative;
+    top: -90px;
+    min-height: 600px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    background-color: pink;
+  }
+
+  .co-left {
+    width:25%;
+    display: inline-block;
+    background-color:red;
+    min-height: 50px;
+  }
+  
+  .co-right {
+    width: 75%;
+    display: inline-block;
+    background-color: blue;
+    min-height: 50px;
+    margin-left: 10px;
+  }
+
+
+  /* 左半部分 */
+  .content .me-card {
+    width: fit-content;
+    /* width: 95%; */
+    /* min-width: 270px; */
+    min-width: 280px;
+    min-height: 650px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid black;
+    padding: 0px 30px;
+  }
+
+  /* 卡片第1部分 */
+  .mecar-title {
+    margin-top: 20px;
+    height: 250px;
+    background-color: white;
+  }
+
+  /* 虚线 */
+  .content .borderbotm {
+    /* border-style: dashed; */
+    border-bottom: 1px dashed blue;
+    height: 10px;
+    margin: 35px 0;
+  }
+
+  /* 卡片第2部分 */
+  .lianxi-list {
+    margin-top: 20px;
+    height: 250px;
+    background-color: white;   
+  }
+  
+  /* 卡片第3部分 */
+  .mecar-bottm {
+    margin-top: 20px;
+    height: 250px;
+    background-color: white; 
+  }
+  
+  /* 卡片第4部分 */
+  .buttom-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 250px;
+    background-color: white;   
+  }
+
+  /* 右半部分 */
+  /* 由于各个页面展现内容不同，此处不设置统一的css样式，每个页面都有对应的css文件 */
+
+  
+  
